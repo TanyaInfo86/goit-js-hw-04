@@ -1,7 +1,8 @@
 'use strict';
 function calcAverageCalories(days) {
     const totalCalories = days.reduce((sum, day) => sum + day.calories, 0);
-    return totalCalories / days.length;
+    return days.length > 0 ? totalCalories / days.length : 0;
+
   }
   console.log(
     calcAverageCalories([
